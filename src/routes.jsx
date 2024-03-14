@@ -9,7 +9,7 @@ const Loadable = (Component) => (props) => (
 
 const MainLayout = Loadable(lazy(() => import('./layouts/MainLayout')));
 
-const Home = Loadable(lazy(() => import('./pages/Home/Home')));
+const CustomTool = Loadable(lazy(() => import('./pages/CustomTool/CustomTool')));
 
 
 const default_not_found_route = {
@@ -23,7 +23,7 @@ const routes = [
     //main domain routes
     {
         path: '/',
-        element: <MainLayout><Home /></MainLayout>
+        element: <MainLayout><CustomTool /></MainLayout>
     },
     ...all_subdomain_routes,
     ...extra_auth_routes,
